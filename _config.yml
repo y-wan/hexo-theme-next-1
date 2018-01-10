@@ -1,3 +1,11 @@
+# ===============================================================
+# ========================= ATTENTION! ==========================
+# ===============================================================
+# NexT repository is moving here: https://github.com/theme-next
+# ===============================================================
+# It's rebase to v6.0.0 and future maintenance will resume there
+# ===============================================================
+
 # ---------------------------------------------------------------
 # Theme Core Configuration Settings
 # ---------------------------------------------------------------
@@ -5,10 +13,6 @@
 # Set to true, if you want to fully override the default configuration.
 # Useful if you don't want to inherit the theme _config.yml configurations.
 override: false
-
-# Allow to cache content generation. Introduced in NexT v6.0.0.
-cache:
-  enable: true
 
 # ---------------------------------------------------------------
 # Site Information Settings
@@ -23,15 +27,15 @@ cache:
 # For example, you put your favicons into `hexo-site/source/images` directory.
 # Then need to rename & redefine they on any other names, otherwise icons from Next will rewrite your custom icons in Hexo.
 favicon:
-  small: /images/favicon-16x16-next.png
-  medium: /images/favicon-32x32-next.png
-  apple_touch_icon: /images/apple-touch-icon-next.png
-  safari_pinned_tab: /images/logo.svg
+  small: /images/favicon.png
+  medium: /images/favicon.png
+  apple_touch_icon: /images/favicon.png
+  safari_pinned_tab: /images/favicon.png
   #android_manifest: /images/manifest.json
   #ms_browserconfig: /images/browserconfig.xml
 
 # Set default keywords (Use a comma to separate)
-keywords: "Hexo, NexT"
+keywords: "Hexo, NexT, y-wan, Yingge WAN"
 
 # Set rss to false to disable feed link.
 # Leave rss as empty to use site's feed link.
@@ -41,7 +45,7 @@ rss:
 footer:
   # Specify the date when the site was setup.
   # If not defined, current year will be used.
-  #since: 2015
+  since: 2017
 
   # Icon between year and copyright info.
   icon: user
@@ -96,57 +100,50 @@ menu:
   #schedule: /schedule/ || calendar
   #sitemap: /sitemap.xml || sitemap
   #commonweal: /404/ || heartbeat
+  Flags: /flags/ || flag
 
-# Enable/Disable menu icons / item badges.
-menu_settings:
-  icons: true
-  badges: false
+# Enable/Disable menu icons.
+menu_icons:
+  enable: true
+
 
 # ---------------------------------------------------------------
 # Scheme Settings
 # ---------------------------------------------------------------
 
 # Schemes
-scheme: Muse
+#scheme: Muse
 #scheme: Mist
 #scheme: Pisces
-#scheme: Gemini
+scheme: Gemini
 
 
 # ---------------------------------------------------------------
 # Sidebar Settings
 # ---------------------------------------------------------------
 
-# Posts / Categories / Tags in sidebar.
-site_state: true
-
 # Social Links.
 # Usage: `Key: permalink || icon`
 # Key is the link label showing to end users.
 # Value before `||` delimeter is the target permalink.
 # Value after `||` delimeter is the name of FontAwesome icon. If icon (with or without delimeter) is not specified, globe icon will be loaded.
-#social:
-  #GitHub: https://github.com/yourname || github
-  #E-Mail: mailto:yourname@gmail.com || envelope
+social:
+  GitHub: https://github.com/y-wan || github
+  E-Mail: mailto:wanyingge1996@gmail.com || envelope
   #Google: https://plus.google.com/yourname || google
   #Twitter: https://twitter.com/yourname || twitter
-  #FB Page: https://www.facebook.com/yourname || facebook
+  Facebook: https://www.facebook.com/grace.wan.3950 || facebook
   #VK Group: https://vk.com/yourname || vk
   #StackOverflow: https://stackoverflow.com/yourname || stack-overflow
   #YouTube: https://youtube.com/yourname || youtube
   #Instagram: https://instagram.com/yourname || instagram
   #Skype: skype:yourname?call|chat || skype
+  Weibo: https://weibo.com/whyno11 || weibo
 
 social_icons:
   enable: true
   icons_only: false
   transition: false
-
-# Follow me on GitHub banner in right-top corner.
-# Usage: `permalink || title`
-# Value before `||` delimeter is the target permalink.
-# Value after `||` delimeter is the title and aria-label name.
-#github_banner: https://github.com/yourname || Follow me on GitHub
 
 # Blog rolls
 links_icon: link
@@ -159,7 +156,7 @@ links_layout: block
 # Sidebar Avatar
 # in theme directory(source/images): /images/avatar.gif
 # in site  directory(source/uploads): /uploads/avatar.gif
-#avatar: /images/avatar.gif
+avatar: /images/avatar.png
 
 # Table Of Contents in the Sidebar
 toc:
@@ -169,7 +166,7 @@ toc:
   number: true
 
   # If true, all words will placed on next lines if header width longer then sidebar width.
-  wrap: false
+  wrap: true
 
 # Creative Commons 4.0 International License.
 # http://creativecommons.org/
@@ -179,8 +176,8 @@ toc:
 
 sidebar:
   # Sidebar Position, available value: left | right (only for Pisces | Gemini).
-  position: left
-  #position: right
+  #position: left
+  position: right
 
   # Sidebar Display, available value (only for Muse | Mist):
   #  - post    expand on posts automatically. Default.
@@ -196,10 +193,10 @@ sidebar:
   offset: 12
 
   # Back to top in sidebar (only for Pisces | Gemini).
-  b2t: false
+  b2t: true
 
   # Scroll percent label in b2t button.
-  scrollpercent: false
+  scrollpercent: true
 
   # Enable sidebar on narrow view (only for Muse | Mist).
   onmobile: false
@@ -228,17 +225,17 @@ auto_excerpt:
 post_meta:
   item_text: true
   created_at: true
-  updated_at: false
+  updated_at: true
   categories: true
 
 # Post wordcount display settings
-# Dependencies: https://github.com/theme-next/hexo-symbols-count-time
-symbols_count_time:
+# Dependencies: https://github.com/willin/hexo-wordcount
+post_wordcount:
+  item_text: true
+  wordcount: false
+  min2read: false
+  totalcount: false
   separated_meta: true
-  item_text_post: true
-  item_text_total: false
-  awl: 5
-  wpm: 200
 
 # Wechat Subscriber
 #wechat_subscriber:
@@ -276,7 +273,7 @@ android_chrome_color: "#222"
 #   image: url-of-image   - Images's url
 custom_logo:
   enabled: false
-  image:
+  image: /images/favicon.png
 
 # Code Highlight theme
 # Available value:
@@ -349,15 +346,9 @@ font:
 mathjax:
   enable: false
   per_page: false
-  # For newMathJax CDN (cdnjs.cloudflare.com) with fallback to oldMathJax (cdn.mathjax.org).
-  cdn: //cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML
-  # For direct link to MathJax.js with CloudFlare CDN (cdnjs.cloudflare.com).
-  #cdn: //cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-MML-AM_CHTML
-  # For automatic detect latest varsion link to MathJax.js and get from CloudFlare.
-  #cdn: //cdn.bootcss.com/mathjax/2.7.1/latest.js?config=TeX-AMS-MML_HTMLorMML
+  cdn: //cdn.bootcss.com/mathjax/2.7.1/latest.js?config=TeX-AMS-MML_HTMLorMML
 
-# Han Support
-# Dependencies: https://github.com/theme-next/theme-next-han
+# Han Support docs: https://hanzi.pro/
 han: false
 
 # Swiftype Search API Key
@@ -371,8 +362,8 @@ han: false
 
 # Disqus
 disqus:
-  enable: false
-  shortname:
+  enable: true
+  shortname: wanyingge
   count: true
 
 # Hypercomments
@@ -444,7 +435,7 @@ gitment:
 #duoshuo_share: true
 
 # NeedMoreShare2
-# Dependencies: https://github.com/theme-next/theme-next-needmoreshare2
+# This plugin is a pure javascript sharing lib which is useful in China.
 # See: https://github.com/revir/need-more-share2
 # Also see: https://github.com/DzmVasileusky/needShareButton
 # iconStyle: default | box
@@ -476,7 +467,7 @@ needmoreshare2:
 #google_site_verification:
 
 # Google Analytics
-#google_analytics:
+google_analytics: UA-99140668-1
 
 # Bing Webmaster tools verification setting
 # See: https://www.bing.com/webmaster/
@@ -497,7 +488,7 @@ needmoreshare2:
 # user_id must NOT be null when admin_enable is true!
 # you can visit http://dev.duoshuo.com get duoshuo user id.
 duoshuo_info:
-  ua_enable: true
+  ua_enable: false
   admin_enable: false
   user_id: 0
   #admin_nickname: Author
@@ -603,7 +594,6 @@ calendar:
   maxResults: 250
 
 # Algolia Search
-# Dependencies: https://github.com/theme-next/theme-next-algolia-instant-search
 algolia_search:
   enable: false
   hits:
@@ -614,7 +604,7 @@ algolia_search:
     hits_stats: "${hits} results found in ${time} ms"
 
 # Local search
-# Dependencies: https://github.com/theme-next/hexo-generator-searchdb
+# Dependencies: https://github.com/flashlab/hexo-generator-search
 local_search:
   enable: false
   # if auto, trigger search by changing input
@@ -658,13 +648,6 @@ tabs:
     labels: true
   border_radius: 0
 
-# Reading progress bar
-# Dependencies: https://github.com/theme-next/theme-next-reading-progress
-reading_progress:
-  enable: false
-  color: "#37c6c0"
-  height: 2px
-
 
 #! ---------------------------------------------------------------
 #! DO NOT EDIT THE FOLLOWING SETTINGS
@@ -690,22 +673,10 @@ motion:
     # Only for Pisces | Gemini.
     sidebar: slideUpIn
 
-# Fancybox. There is support for old version 2 and new version 3.
-# Please, choose only any one variant, do not need to install both.
-# For install 2.x: https://github.com/theme-next/theme-next-fancybox
-# For install 3.x: https://github.com/theme-next/theme-next-fancybox3
-fancybox: false
-
-# Added switch option for separated repo in 6.0.0.
-# Dependencies: https://github.com/theme-next/theme-next-fastclick
-fastclick: false
-
-# Added switch option for separated repo in 6.0.0.
-# Dependencies: https://github.com/theme-next/theme-next-jquery-lazyload
-lazyload: false
+# Fancybox
+fancybox: true
 
 # Progress bar in the top during page loading.
-# Dependencies: https://github.com/theme-next/theme-next-pace
 pace: false
 # Themes list:
 #pace-theme-big-counter
@@ -723,23 +694,21 @@ pace: false
 #pace-theme-minimal
 # For example
 # pace_theme: pace-theme-center-simple
-pace_theme: pace-theme-minimal
+pace_theme: pace-theme-flash
 
 # Canvas-nest
-# Dependencies: https://github.com/theme-next/theme-next-canvas-nest
 canvas_nest: false
 
-# JavaScript 3D library.
-# Dependencies: https://github.com/theme-next/theme-next-three
 # three_waves
 three_waves: false
+
 # canvas_lines
 canvas_lines: false
+
 # canvas_sphere
 canvas_sphere: false
 
 # Only fit scheme Pisces
-# Dependencies: https://github.com/theme-next/theme-next-canvas-ribbon
 # Canvas-ribbon
 # size: The width of the ribbon.
 # alpha: The transparency of the ribbon.
@@ -843,4 +812,4 @@ js: js
 images: images
 
 # Theme version
-version: 6.0.0
+version: 5.1.4
